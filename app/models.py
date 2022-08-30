@@ -7,6 +7,6 @@ class Application(models.Model):
     office = models.CharField(null=True, blank=False, max_length=255)
     time = models.CharField(null=True, blank=False, max_length=255)
     address = models.CharField(null=True, blank=False, max_length=255)
-    payment = models.CharField(null=True, blank=False, max_length=255)
+    payment = models.CharField(null=True, blank=True, max_length=255)
     published = models.DateTimeField(null=True, blank=True, db_index=True, auto_now_add=True)
 

@@ -60,7 +60,6 @@ class ApplicationForm(ModelForm):
             "phone",
             "office",
             "time",
-            "payment",
             "address"
         }
 
@@ -70,7 +69,6 @@ class ApplicationForm(ModelForm):
             "phone": "Telefon raqamingiz",
             "office": "Qaysi filialimiz sizga qulay?",
             "time": "Qaysi payt siz uchun qulay?",
-            "payment": "Sizga qulay bo'lgan oylik to'lov",
             "address": "Yashash manzilingiz"
         }
 
@@ -80,7 +78,6 @@ class ApplicationForm(ModelForm):
             "phone": forms.TextInput(attrs={"class": "form-control mb-5", "placeholder": "+998991234567"}),
             "office": forms.Select(choices=offices, attrs={"class": "custom-select form-control mb-5 choicesjs"}),
             "time": forms.Select(choices=times, attrs={"class": "custom-select form-control mb-5 choicesjs"}),
-            "payment": forms.TextInput(attrs={"class": "form-control mb-5"}),
             "address": forms.TextInput(attrs={"class": "form-control mb-5"}),
         }
     
@@ -90,6 +87,5 @@ class ApplicationForm(ModelForm):
         "phone",
         "office",
         "time",
-        "payment",
         "address"
     ]
