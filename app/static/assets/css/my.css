@@ -1,3 +1,7 @@
+body {
+    background-color: rgba(250, 185, 6, 0.924);
+}
+
 .container {
     max-width: 700px;
     width: 100%;
