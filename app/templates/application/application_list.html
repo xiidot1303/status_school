@@ -1,0 +1,49 @@
+
+{% extends 'layout/basic.html' %}
+
+{% load static %}
+
+{% block title %}
+Status school | Foydalanuvchilar
+{% endblock %}
+
+{% block main %}
+
+<table id="datatable" class="table data-table table-striped table-bordered" >
+    <thead>
+       <tr>
+            <th>№</th>
+            <th>O'quvchi ismi</th>
+            <th>O'quvchi sinfi</th>
+            <th>Telefon raqami</th>
+            <th>Tanlangan filial</th>
+            <th>Qulay vaqt</th>
+            <th>To'lov</th>
+            <th>Manzil</th>
+
+       </tr>
+    </thead>
+    <tbody>
+        {% for l in list %}
+       <tr>
+            <td>{{ forloop.counter }}</td>
+            <td>{{ l.name }}</td>
+            <td>{{ l.degree }}</td>
+            <td>{{ l.phone }}</td>
+            <td>{{ l.office }}</td>
+            <td>{{ l.time }}</td>
+            <td>{{ l.payment }}</td>
+            <td>{{ l.address }}</td>
+
+       </tr>
+       {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
+
+{% block script %}
+<script>
+
+</script>
+{% endblock %}
+
