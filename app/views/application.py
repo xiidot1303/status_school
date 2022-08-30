@@ -1,9 +1,10 @@
 from django.shortcuts import render
 from app.forms import *
 from django.contrib.auth.decorators import login_required
+from django.views.decorators.csrf import csrf_exempt
 
 
-
+@csrf_exempt
 def application_registr(request):
     if request.method == 'POST':
         form = ApplicationForm(request.POST)
